@@ -3,7 +3,7 @@ const expres =require("express")
 const route=expres.Router()
 
 route.get('/',(req,res)=>{
-res.render("admin/index")
+res.render("layouts/cadastro")
 })
 
 route.get('/posts',(req,res)=>{
