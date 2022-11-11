@@ -45,8 +45,8 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <div class="image"><a href="https://praec.herokuapp.com"><img src="assets/img/logo_praec.png" alt="" class="img-fluid"></a> </div>
-        <h1 class="text-light"><a href="index.html">PRAEC</a></h1>
+        <div class="image"><a href="http://localhost:8090/cadastro/form"><img src="assets/img/logo_praec.png" alt="" class="img-fluid"></a> </div>
+        <h1 class="text-light"><a href="http://localhost:8090/login">PRAEC</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -625,39 +625,53 @@ demais discentes.</p>
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+
+            
+            <form action="/coment" method="post" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Seu Nome</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Seu Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Assunto</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
+                  <input type="text" name="name" class="form-control"   id="name" required>
+               
+  
               <div class="form-group">
                 <label for="name">Mensagem</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Carregando</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Sua mensagem foi enviada. Agradecemos!</div>
-              </div>
+              
               <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
             </form>
           </div>
+       
+        
+     
 
-        </div>
+    
 
       </div>
     </section><!-- End Contact Section -->
+<section class="contact">
 
+
+
+
+    <hr>
+        <div>
+          <p>comentarios</p>
+          {{#each coment}}
+          <br>
+          <hr>
+          <p>    por: {{nome_comentarios}}</p>
+          <br>
+          <p>    {{texto_comentarios}}</p>
+         
+          {{/each}}
+        </div>
+
+
+
+</section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -687,7 +701,7 @@ demais discentes.</p>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+ 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
