@@ -1,0 +1,48 @@
+.comentarios{
+
+background-color: white;
+ box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+position: relative;
+min-width: 300px;
+margin: 10px;
+
+
+}
+
+
+.valores{
+
+background-color: white;
+ box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+margin: 10px;
+}
+
+.titulo{
+
+    margin-left: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 120%;
+}
+.ti-coment{
+
+font-size: 120%;  
+}
+.coment{
+
+   margin: 20px;
+
+
+}
+.tex-va{
+
+    margin-left: 15px;
+    margin-right: 730px;
+    font-size: 115%;
+    font-weight: 600;
+}
+.hor{
+
+    font-size:65%;
+   
+}

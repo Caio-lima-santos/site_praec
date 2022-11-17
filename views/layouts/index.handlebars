@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
+   
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PRAEC</title>
+  
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo_praec.png" rel="icon">
-  <link href="assets/img/logo_praec.png" rel="apple-touch-icon">
+  <link href="/assets/css/img/fundoi.png" rel="icon">
+  <link href="/assets/css/img/fundoi.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -33,6 +34,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+ 
 </head>
 
 <body>
@@ -45,12 +47,12 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <div class="image"><a href="http://localhost:8090/cadastro/form"><img src="assets/img/logo_praec.png" alt="" class="img-fluid"></a> </div>
-        <h1 class="text-light"><a href="http://localhost:8090/login">PRAEC</a></h1>
+        <div class="image"><a href="http://praec.herokuapp.com/cadastro/form"><img src="assets/img/logo_praec.png" alt="" class="img-fluid"></a> </div>
+        <h1 class="text-light"><a href="http://praec.herokuapp.com/login">PRAEC</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.instagram.com/projetopraec?igshi=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://www.skype.com/pt-br/" class="google-plus"><i class="bx bxl-skype"></i></a>
           <a href="https://br.linkedin.com/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
@@ -70,7 +72,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center background-image-url('./img/fundo.png')     ">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center background-image-url('./img/fundoi.png')     ">
     <div class="hero-container" data-aos="fade-in">
       <h1>PRAEC</h1>
       <p>Sistema autônomo para tratamento de água:<span class="typed" data-typed-items="uma alternativa prática e eficiente."></span></p>
@@ -610,16 +612,16 @@ demais discentes.</p>
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>12345caiolima@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Telefone:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>96504727</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              
             </div>
 
           </div>
@@ -631,8 +633,10 @@ demais discentes.</p>
             <form action="/coment" method="post" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Seu Nome</label>
-                  <input type="text" name="name" class="form-control"   id="name" required>
+                       
+                  <input type="text" hidden name="usuario"   value={{usuario.usuario}} class="form-control"   id="name" required>
+                  <input type="text" hidden name="senha"   value={{usuario.senha}} class="form-control"   id="name" required>
+                  <input type="text" hidden name="name"   value={{usuario.nome}} class="form-control"   id="name" required>
                
   
               <div class="form-group">
@@ -650,28 +654,90 @@ demais discentes.</p>
     
 
       </div>
-    </section><!-- End Contact Section -->
-<section class="contact">
+    </section>
+
+
+<section >
+
+
+
+<strong><h3><p class="titulo">Valores</p></h3></strong>
+     <div class="row" data-aos="fade-in"></div>
+        <div class="valores">
+          
+      
+   
+
+
+
+<hr>
+<br>
+ <div class="tex-va">
+  <h4>atualizado a cada 20 minutos</h4>
+  <br>
+<p>ph: {{valores.ph}}pH</p>
+<hr>
+<br>
+
+<p >oxigenio dissolvido: {{valores.oxigenio}}mg/L.O²</p>
+<hr>
+<br>
+
+<p>Condutibilidade da agua: {{valores.condutividade}}uS/cm</p>
+<hr>
+<br>
+<p >salinidade da agua: {{valores.salinidade}}mg/L</p>
+<hr>
+<br>
+<p>temperatura da agua: {{valores.temperatura}}°</p>
+<hr>
+</div>
+<br>
+<hr>
+
+  </div>
+
+
+
+</section>
 
 
 
 
-    <hr>
-        <div>
-          <p>comentarios</p>
+
+<section >
+                           
+        
+ <strong> <h3><p  class="titulo">Comentarios</p></h3></strong >
+        
+ <div class="row" data-aos="fade-in"></div>
+        <div class="comentarios">
+        <br>
           {{#each coment}}
+          <div class="coment">
           <br>
-          <hr>
-          <p>    por: {{nome_comentarios}}</p>
-          <br>
-          <p>    {{texto_comentarios}}</p>
+           
+           
+          <p class="ti-coment">  <strong >  por: {{nome_comentarios}}</strong></p>
          
+          <p>    {{texto_comentarios}}</p>
+          <p class="hor"> comentado em:  {{createdAt}}</p>
+          <hr>
+         </div>
           {{/each}}
+          <br>
         </div>
 
 
 
 </section>
+
+
+
+
+
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -691,7 +757,7 @@ demais discentes.</p>
   </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+   <link rel="stylesheet" href="/assets/css/coment_valores.css">
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>

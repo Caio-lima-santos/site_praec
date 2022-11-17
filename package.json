@@ -8,5 +8,20 @@
   },
   "scripts": {
     "start": "node ap.js"
-  }
+  },
+  "name": "site_praec",
+  "version": "2.0.0",
+  "main": "ap.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caio-lima-santos/site_praec.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caio-lima-santos/site_praec/issues"
+  },
+  "homepage": "https://github.com/Caio-lima-santos/site_praec#readme",
+  "description": ""
 }

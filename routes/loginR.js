@@ -9,24 +9,7 @@ res.render("layouts/login/login")
 })
 
 route.post('/check',(req,res)=>{
-DB.usuario.findAll({
-    where:{
-        usuario:req.body.usuario
-        ,senha:req.body.senha
-      } }).then((post)=>{  
-        if(post[0] != undefined){
-        console.log("usuario:"+post[0].usuario +"  senha: " +post[0].senha)
-        
-        res.redirect(`/inic`)
-      
-      
-      
-      }
-        else{ 
-        res.redirect("/login")
-        }
-
-      }) 
+ 
 })
 
 

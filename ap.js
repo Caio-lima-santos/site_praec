@@ -59,12 +59,33 @@ app.post("/cadastro/add",(req,res)=>{
 })
 
 //rotas
-app.get("/inic",(req,res)=>{
+app.post("/",(req,res)=>{
 
+ //busca usuario
+ Db.usuario.findAll({
+    where:{
+        usuario:req.body.usuario
+        ,senha:req.body.senha
+      } }).then((post)=>{  
+        if(post[0] != undefined){
+        console.log("usuario:"+post[0].usuario +"  senha: " +post[0].senha)
+        //renderiza home page
+       Db.comentarios.findAll().then((coment)=>{
 
-    Db.comentarios.findAll().then((coment)=>{
-    res.render("layouts/index",{coment:coment})
-    })
+        Db.valores.findAll().then((valores)=>{
+      res.render("layouts/index",{coment:coment,usuario:post[0],valores:valores[0]})
+      });
+  
+  
+       })
+      }
+        else{ 
+          //redireciona
+        res.redirect("/login")
+        }
+
+      }) 
+
 }
 )
 
@@ -82,7 +103,7 @@ app.get("/login",(req,res)=>{
         texto_comentarios:req.body.message
        }
  ).then(()=>{console.log("enviado pro db");
- res.redirect(`/inic`)
+ res.render("layouts/redir",{usuario:req.body.usuario ,senha:req.body.senha})
 
 }).catch((er)=>{console.log("erro ao enviar: " + er)})
 

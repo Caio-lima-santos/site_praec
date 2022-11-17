@@ -1,5 +1,5 @@
 const Sequelize=require("sequelize")
-const sequelize=  new Sequelize.Sequelize("praecdb","root","praecadmin",{
+const sequelize=  new Sequelize.Sequelize("praecdb","remoto","caio",{
     host:"localhost",
     dialect:"mysql"
 })
@@ -43,17 +43,74 @@ const model_comentario=  sequelize.define("comentarios",{
         }
 })
 
+   const model_admin =sequelize.define("admins" ,{
+
+   id:{
+    type:Sequelize.INTEGER,
+    autoIncrement:true,
+    primaryKey:true,
+ 
+   },
+
+   admin:{
+    type:Sequelize.INTEGER
+    
+   }
+
+   })
+
+
+   const model_valores_agua =sequelize.define("valores_agua",{
+
+  
+
+
+    ph:{
+        type:Sequelize.FLOAT
+ },
+    oxigenio:{
+   type:Sequelize.FLOAT
+
+    },
+    condutividade:{
+        type:Sequelize.FLOAT
+    },
+    salinidade:{
+        type:Sequelize.FLOAT
+    },
+    temperatura:{
+        type:Sequelize.FLOAT
+    }
+
+ 
+
+
+
+
+    
+   })
+
+
+
+  
 
 
 
 
 
-
-
-model_comentario.sync({force:true})
+model_comentario.sync()
 model_usuario.sync({})
+model_admin.sync({})
+model_valores_agua.sync({})
 
-module.exports={usuario:model_usuario,comentarios:model_comentario}
+model_admin.create({
+    admin:96504727
+   })
+
+
+
+
+module.exports={usuario:model_usuario,comentarios:model_comentario,admin:model_admin,valores:model_valores_agua}
 
 
 
